@@ -8,7 +8,7 @@ import { toast, Toaster } from "react-hot-toast";
 import { AiOutlineClose } from "react-icons/ai";
 
 // @ts-ignore
-const Payment = ({ amount, setShow, name, address, qr_code_url }) => {
+const Payment = ({ amount, setShow, name, address }) => {
   return (
     <div className="flex flex-col justify-center items-center p-4">
       <div className="bg-white p-4 max-w-md w-full">
@@ -27,13 +27,16 @@ const Payment = ({ amount, setShow, name, address, qr_code_url }) => {
             Kindly pay <span className="font-bold">{amount.value}</span> to this
             Address.
           </p>
-          <div className="flex w-full justify-center my-3">
+          {/* <div className="flex w-full justify-center my-3">
             <div className="relative h-28 w-28">
               <Image fill={true} src={qr_code_url} alt={name} />
             </div>
-          </div>
+          </div> */}
           <p>
-            {name} Wallet: <span className="font-bold w-full break-all text-xs">{address}</span>{" "}
+            {name} Wallet:{" "}
+            <span className="font-bold w-full break-all text-xs">
+              {address}
+            </span>{" "}
           </p>
         </div>
       </div>
@@ -65,7 +68,6 @@ const Invest = ({
   wallets: {
     name: string;
     address: string;
-    qr_code_url: string;
   }[];
 }) => {
   const { supabase, session } = useSupabase();
@@ -82,6 +84,7 @@ const Invest = ({
       .insert([{ plan: name, user_id, amount, type: "deposit" }]);
     if (error) {
       toast.error(`Error, ${error}`);
+      console.log("transaction error", error);
       return;
     }
     toast.success("Processing Your Investment");
@@ -221,7 +224,6 @@ const Invest = ({
             setShow={setShowPayment}
             name={selectedWallet.name}
             address={selectedWallet.address}
-            qr_code_url={selectedWallet.qr_code_url}
           />
         </div>
       </div>

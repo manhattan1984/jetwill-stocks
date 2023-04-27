@@ -31,7 +31,7 @@ const Header = ({ token, links }) => {
           </button>
         ) : (
           <Link href="/signup">
-            <p className="text-blue-700 uppercase">get started</p>
+            <p className="text-blue-500 uppercase">get started</p>
           </Link>
         )}
         <AiOutlineMenu

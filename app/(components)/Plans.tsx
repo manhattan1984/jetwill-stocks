@@ -37,10 +37,10 @@ const Plan = ({ name, minimum, maximum, interest, duration }: PlanType) => {
           <p>Duration:</p>
           <p>{duration} Hours</p>
         </div>
-        <div className="flex justify-between">
+        {/* <div className="flex justify-between">
           <p>Bitcoin Hashrate:</p>
           <p>14710TH/s</p>
-        </div>
+        </div> */}
         <div className="flex justify-between">
           <p>Fast Payout:</p>
           <p>Yes</p>

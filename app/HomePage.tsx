@@ -12,7 +12,12 @@ import {
 } from "react-icons/bs";
 import { BiChip } from "react-icons/bi";
 import { FaUsers } from "react-icons/fa";
-import { AiTwotoneSecurityScan, AiOutlinePoweroff } from "react-icons/ai";
+import {
+  AiTwotoneSecurityScan,
+  AiOutlinePoweroff,
+  AiOutlineStock,
+  AiOutlineMonitor,
+} from "react-icons/ai";
 
 import { useRouter } from "next/navigation";
 import { TypeAnimation } from "react-type-animation";
@@ -22,52 +27,55 @@ import { useEffect } from "react";
 import Reviews from "./(components)/Reviews";
 import FAQ from "./(components)/FAQ";
 import Link from "next/link";
+import { GoPerson, GoVerified } from "react-icons/go";
+import { GrUserExpert } from "react-icons/gr";
+import { MdManageAccounts } from "react-icons/md";
 
 const features = [
   {
-    icon: <BsFillPieChartFill className="text-2xl" />,
-    title: "Pool Allocation",
-    body: "You can decide which pools you want to mine. This allows you to find the most profitable pools.",
+    icon: <GoPerson className="text-2xl" />,
+    title: "Personalized",
+    body: "Personalized investment strategies tailored to your financial goals and risk tolerance.",
   },
   {
-    icon: <BsFillPlugFill className="text-2xl" />,
-    title: "Low Maintenance Fee",
-    body: "We got the lowest price on electricity(0.05 $/kWh) and purchasing costs in the Cryptocurrency mining industry.",
+    icon: <GoVerified className="text-2xl" />,
+    title: "Expert Advice",
+    body: "Access to expert advice and analysis from experienced professionals.",
   },
   {
-    icon: <BiChip className="text-2xl" />,
-    title: "Newest Hardware",
-    body: "We use The newest ASIC miner, GPU rigs. You get the most advanced technologies from HashShiny.io",
+    icon: <MdManageAccounts className="text-2xl text-white" />,
+    title: "Easy Account Management",
+    body: "Convenient online account management, including real-time updates on your portfolio performance.",
   },
   {
-    icon: <FaUsers className="text-2xl" />,
-    title: "Expert Team",
-    body: "Our mining team come from in blockchain industry and IT engineers, we have you covered with the knowledge and skills of our team.",
+    icon: <AiOutlineStock className="text-2xl" />,
+    title: "Efficient Trading",
+    body: "Efficient trading and execution of orders, with access to a wide range of securities and financial products.",
   },
   {
     icon: <BsCurrencyBitcoin className="text-2xl" />,
     title: "Daily Payout",
-    body: "The mining starts immediately after confirmed payment. First payouts within 24 hours. Afterward, the payouts continue daily.",
+    body: "The investments starts immediately after confirmed payment. First payouts within 24 hours. Afterward, the payouts continue daily.",
   },
   {
     icon: <AiTwotoneSecurityScan className="text-2xl" />,
     title: "Security",
-    body: "The overwhelming majority of funds are stored in offline, cold wallets. McAfee® SECURE protection. Cloudflare® SECURE protection.",
+    body: "Secure and reliable technology infrastructure to protect your sensitive financial information and ensure the safety of your investments.",
   },
   {
-    icon: <AiOutlinePoweroff className="text-2xl" />,
-    title: "Mining Switch",
-    body: "You can control the Mining process by setting up Switch on or Switch off. You have full control permissions on Mining.",
+    icon: <AiOutlineMonitor className="text-2xl" />,
+    title: "Monitoring",
+    body: "We monitor your investments and provide regular updates on performance. This can help you make informed decisions about when to buy, sell, or hold your investments.",
   },
   {
     icon: <BsGraphUp className="text-2xl" />,
-    title: "Hashrate Graphs",
-    body: "Our graphs give you up to the hourly hashrates, It is a Live Hashrate graph that gives you live data within seconds.",
+    title: "Competitive Pricing",
+    body: "Competitive pricing and fees, with transparent and easy-to-understand billing and payment options.",
   },
   {
-    icon: <BsFillPhoneFill className="text-2xl" />,
-    title: "Mobile App",
-    body: "Fully functioning Android and Apple Apps that's integrated with our system. Mobile APP currently have better usability than website.",
+    icon: <BsFillPieChartFill className="text-2xl" />,
+    title: "Diversification",
+    body: " We help you diversify your investment portfolio, which can reduce risk and increase returns. We provide access to a wide range of investment options, including stocks, bonds, mutual funds, and ETFs.",
   },
 ];
 
@@ -111,12 +119,11 @@ export default function Home({ plans }: { plans: PlanType[] }) {
   };
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      const country = countries[Math.floor(Math.random() * countries.length)];
-      toast(`Someone from ${country} just invested $${randomAmount()}`);
-    }, 10000);
-
-    return () => clearInterval(interval);
+    // const interval = setInterval(() => {
+    //   const country = countries[Math.floor(Math.random() * countries.length)];
+    //   toast(`Someone from ${country} just invested $${randomAmount()}`);
+    // }, 10000);
+    // return () => clearInterval(interval);
   }, []);
 
   return (
@@ -266,7 +273,7 @@ export default function Home({ plans }: { plans: PlanType[] }) {
       <div className="w-full mb-8 bg-neutral-900 text-white py-8">
         <p className="mb-8 text-md uppercase text-center px-4">
           So why trust your money with anyone else? Join the thousands of
-          investors who have chosen ABC Stock Brokers as their partner in wealth
+          investors who have chosen Jetwill Stocks as their partner in wealth
           creation. Open an account today and start investing in your future.
         </p>
         <div className="flex flex-col md:flex-row md:flex-wrap gap-4 w-4/5 mx-auto justify-center">
@@ -291,7 +298,7 @@ export default function Home({ plans }: { plans: PlanType[] }) {
       <Reviews />
 
       {/* Contact Form */}
-      <div className="bg-neutral-800">
+      {/* <div className="bg-neutral-800">
         <div className="w-11/12 mx-auto">
           <p className="text-white text-3xl py-4">Let's talk about your idea</p>
 
@@ -312,7 +319,7 @@ export default function Home({ plans }: { plans: PlanType[] }) {
             send message
           </button>
         </div>
-      </div>
+      </div> */}
     </main>
   );
 }

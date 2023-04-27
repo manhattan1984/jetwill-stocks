@@ -13,7 +13,7 @@ const Footer = () => {
         <p className="text-xl mb-1">About Jetwill Stocks</p>
         <Divider />
         <div className="">
-          <div className="w-32 mt-4">
+          <div className="w-32 my-4">
             <Image
               alt="Logo"
               src="/transparent.png"
@@ -26,7 +26,7 @@ const Footer = () => {
 
           <p>
             Investment strategy is based on well researched Index Strategy and
-            invests exclusively into top 20 underlying crypto assets with the
+            invests exclusively into top 20 underlying assets with the
             highest market capitalization.
           </p>
         </div>
