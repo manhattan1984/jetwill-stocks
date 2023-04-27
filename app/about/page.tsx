@@ -78,43 +78,34 @@ const DataCenterItem = ({ icon, name, body, image }) => {
 
 const page = () => {
   return (
-    <div className="">
-      <div className="w-11/12 mx-auto">
-        <p className="text-3xl my-4">About Us</p>
-        <Divider />
+    <div className="w-11/12 mx-auto">
+      <p className="text-3xl my-4">About Us</p>
+      <Divider />
 
-        <p className="my-2 font-light">
-          Jetwill Stocks was founded in 2017. <br /> We've developed the
-          world's Top Cloud Mining Platform with the most advanced deployment
-          technology, More new product and services are in our pipeline.
-        </p>
-
-        <p className="text-3xl my-4">Our Team</p>
-        <Divider />
-        <p className="my-2 font-light">
-          Most of Jetwill Stocks team are from top dotcom companies. Over half
-          of our team are R&D division who possess rich technological prowess.
-        </p>
-
-        <p className="text-3xl my-4">Our Vision</p>
-        <Divider />
-        <p className="my-2 font-light">
-          Jetwill Stocks aims to extend our business to the entire
-          cryptocurrency industry chain in the future and serve global users
-          with technology innovations.
-        </p>
-      </div>
-      <div className="">
-        <div className="w-11/12 mx-auto">
-          <p className="text-3xl my-2">Our Data Center</p>
-          <Divider />
-        </div>
-        <div className="flex flex-col gap-3 md:flex-row md:flex-wrap md:justify-center">
-          {dataItems.map((item, index) => (
-            <DataCenterItem {...item} key={index} />
-          ))}
-        </div>
-      </div>
+      <p className="my-8">
+        Welcome to our stock broker website, where we believe that smart
+        investments, expert advice, and tailored portfolios are the keys to
+        achieving your financial goals and securing your future.
+        <br />
+        Our team of experienced professionals is committed to providing you with
+        the highest level of service and expertise, whether you are a seasoned
+        investor or just starting out. We understand that every investor is
+        unique, with different goals, risk tolerances, and investment horizons.
+        That's why we take the time to get to know you, understand your needs
+        and preferences, and develop a personalized investment strategy that is
+        right for you.
+        <br />
+        We believe in transparency and accountability, and we are committed to
+        providing you with clear and concise information about your investments,
+        including performance, fees, and risk. We also believe in education, and
+        we strive to keep you informed and empowered with the latest market
+        insights and investment trends.
+        <br />
+        At our stock broker website, we are dedicated to helping you achieve
+        your financial goals and build a secure future for yourself and your
+        loved ones. Contact us today to learn more about how we can help you
+        succeed in the stock market.
+      </p>
     </div>
   );
 };

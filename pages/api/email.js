@@ -3,7 +3,7 @@ const nodemailer = require("nodemailer");
 import mjml2html from "mjml";
 
 export default async function handler(req, res) {
-  const EMAIL = "contact@jetwillstocks.com";
+  const EMAIL = "support@jetwillstocks.com";
   const data = JSON.parse(req.body);
 
   const { email, message, subject } = data;

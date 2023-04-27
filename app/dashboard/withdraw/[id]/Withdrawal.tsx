@@ -73,13 +73,13 @@ const Withdrawal = ({
                   // @ts-ignore
                   +amountRef.current.value
                 );
-                // sendEmailToUser(
-                //   email,
-                //   "Withdrawal",
-                //   // @ts-ignore
-                //   `We have been notified of your recent request of $${amountRef.current.value}. It is currently being processed. Thank you.`
-                // );
-                // router.push(`/dashboard/${user_id}`);
+                sendEmailToUser(
+                  email,
+                  "Withdrawal",
+                  // @ts-ignore
+                  `We have been notified of your recent request of $${amountRef.current.value}. It is currently being processed. Thank you.`
+                );
+                router.push(`/dashboard/${user_id}`);
                
               }}
               className="text-blue-600 py-1 px-3"

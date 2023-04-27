@@ -142,7 +142,7 @@ export default function Home({ plans }: { plans: PlanType[] }) {
         </div>
       </div> */}
 
-      <div className="bg-cover bg-center bg-[url('https://images.unsplash.com/photo-1641580529558-a96cf6efbc72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')] text-white">
+      <div className="bg-cover bg-center bg-[url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80')] text-white">
         <div className="backdrop-brightness-50 p-4 flex flex-col lg:flex-row gap-2">
           <div className="">
             <p className="text-5xl uppercase">
@@ -159,18 +159,20 @@ export default function Home({ plans }: { plans: PlanType[] }) {
               today!
             </p>
             <p className="text-3xl my-4">
-              The faster, safer platform to mining bitcoin!
+              Welcome to Jetwill Stocks - Your Partner in Wealth Creation
             </p>
             <p className="text-md">
-              Jetwill Stocks aims to extend business to the entire
-              cryptocurrency industry chain in the future and serve global users
-              with technology innovations
+              At Jetwill Stocks, we believe that every individual has the
+              potential to create wealth through smart investments. As your
+              trusted partner, we provide you with the tools, resources and
+              expertise to make informed investment decisions and achieve your
+              financial goals.
             </p>
             <button
               onClick={signUp}
               className="rounded bg-blue-600 p-3 uppercase my-4"
             >
-              start mining
+              start trading
             </button>
           </div>
           <div className="flex w-full">
@@ -178,7 +180,7 @@ export default function Home({ plans }: { plans: PlanType[] }) {
               height={0}
               width={0}
               sizes="100%"
-              className="h-30 w-1/2"
+              className="h-30 w-1/2 lg:h-auto lg:w-1/2"
               alt="android"
               src="/google.png"
             />
@@ -187,7 +189,7 @@ export default function Home({ plans }: { plans: PlanType[] }) {
               height={0}
               width={0}
               sizes="100%"
-              className="h-30 w-1/2"
+              className="h-30 w-1/2 lg:h-auto lg:w-1/2"
               alt="android"
               src="/apple.png"
             />
@@ -203,8 +205,10 @@ export default function Home({ plans }: { plans: PlanType[] }) {
           <p className="text-3xl uppercase my-4">how it works</p>
           <div className="h-[1px] bg-blue-400 w-1/12 mx-auto"></div>
           <p className="my-4 text-gray-400 text-sm">
-            Getting started with Jetwill Stocks is as simple as A B C! Simple
-            steps to earning maximum profits
+            Whether you're a seasoned investor or just starting out, we offer a
+            range of investment options to suit your needs. From stocks and
+            mutual funds to bonds and ETFs, we help you build a diverse
+            portfolio that delivers steady returns over time.
           </p>
         </div>
         <div className="flex flex-col md:flex-row gap-4 items-center md:justify-between">
@@ -231,11 +235,14 @@ export default function Home({ plans }: { plans: PlanType[] }) {
             src="https://embed.lottiefiles.com/animation/79966"
           ></iframe>
         </div> */}
-        <p className="text-4xl text-blue-400 font-bold uppercase">
+        {/* <p className="text-4xl text-blue-400 font-bold uppercase">
           Awesome Facts
-        </p>
+        </p> */}
         <p className="text-neutral-100">
-          We are not just the best, the numbers speak for us.
+          Our team of experienced brokers and analysts work tirelessly to keep
+          you informed about market trends, investment opportunities and
+          potential risks. We believe that transparency and communication are
+          key to building long-term relationships with our clients.
         </p>
 
         <div className="flex flex-col gap-4 md:flex-row items-center justify-center text-center">
@@ -257,7 +264,11 @@ export default function Home({ plans }: { plans: PlanType[] }) {
       </div>
       <div className="bg-neutral-100 h-full">{/* <Calculator /> */}</div>
       <div className="w-full mb-8 bg-neutral-900 text-white py-8">
-        <p className="mb-8 text-2xl uppercase text-center">Why choose us?</p>
+        <p className="mb-8 text-md uppercase text-center px-4">
+          So why trust your money with anyone else? Join the thousands of
+          investors who have chosen ABC Stock Brokers as their partner in wealth
+          creation. Open an account today and start investing in your future.
+        </p>
         <div className="flex flex-col md:flex-row md:flex-wrap gap-4 w-4/5 mx-auto justify-center">
           {/* Code Here */}
           {features.map((feature, index) => (
@@ -270,11 +281,7 @@ export default function Home({ plans }: { plans: PlanType[] }) {
       <div className="my-4">
         <div className="text-center">
           <p className="font-medium text-2xl my-2 capitalize">
-            choose mining plan
-          </p>
-          <p className="text-sm mb-4 w-4/5 mx-auto">
-            Your hardware is already running, find a plan that's right for you
-            (Hashrate Converter)
+            choose an investment plan
           </p>
         </div>
 
