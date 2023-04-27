@@ -30,7 +30,7 @@ const Menu = ({ links }) => {
          h-screen w-screen bg-neutral-900 text-white flex flex-col justify-between p-4`}
       >
         <div className="flex justify-between items-center">
-          <div className="flex items-center">
+          <div className="w-40">
             <Image
               alt="Logo"
               src="/transparent.png"
