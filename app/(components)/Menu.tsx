@@ -30,16 +30,15 @@ const Menu = ({ links }) => {
          h-screen w-screen bg-neutral-900 text-white flex flex-col justify-between p-4`}
       >
         <div className="flex justify-between items-center">
-          <div className="w-40">
-            <Image
-              alt="Logo"
-              src="/transparent.png"
-              sizes="100%"
-              className="w-full h-4"
-              height={0}
-              width={0}
-            />
-          </div>
+          <Image
+            alt="Logo"
+            src="/transparent.png"
+            sizes="100%"
+            className="w-auto h-6"
+            height={0}
+            width={0}
+          />
+
           <AiOutlineClose
             onClick={() => {
               setShowHomeMenu(!showHomeMenu);

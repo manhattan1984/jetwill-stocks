@@ -55,7 +55,7 @@ const features = [
   {
     icon: <BsCurrencyBitcoin className="text-2xl" />,
     title: "Daily Payout",
-    body: "The investments starts immediately after confirmed payment. First payouts within 24 hours. Afterward, the payouts continue daily.",
+    body: "The investments starts after confirmed payment. First payouts within 24 hours. Afterward, the payouts continue daily.",
   },
   {
     icon: <AiTwotoneSecurityScan className="text-2xl" />,
@@ -151,7 +151,7 @@ export default function Home({ plans }: { plans: PlanType[] }) {
 
       <div className="bg-cover bg-center bg-[url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80')] text-white">
         <div className="backdrop-brightness-50 p-4 flex flex-col lg:flex-row gap-2">
-          <div className="">
+          <div className="p-4">
             <p className="text-5xl uppercase">
               start trading
               <span>
@@ -165,10 +165,10 @@ export default function Home({ plans }: { plans: PlanType[] }) {
               </span>
               today!
             </p>
-            <p className="text-3xl my-4">
+            {/* <p className="text-3xl my-4">
               Welcome to Jetwill Stocks - Your Partner in Wealth Creation
-            </p>
-            <p className="text-md">
+            </p> */}
+            <p className="text-md mt-2">
               At Jetwill Stocks, we believe that every individual has the
               potential to create wealth through smart investments. As your
               trusted partner, we provide you with the tools, resources and

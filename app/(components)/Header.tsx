@@ -15,9 +15,14 @@ const Header = ({ token, links }) => {
   return (
     <nav className="fixed z-40 w-full flex items-center justify-between p-4 bg-neutral-900 text-white top-0">
       <Link href="/">
-        <div className="w-40">
-          <Image alt="Logo" src="/transparent.png" sizes="100%" className="w-full h-4" height={0} width={0} />
-        </div>
+        <Image
+          alt="Logo"
+          src="/transparent.png"
+          sizes="100%"
+          className="w-full h-6"
+          height={0}
+          width={0}
+        />
       </Link>
       <div className="flex gap-4 items-center">
         {token ? (

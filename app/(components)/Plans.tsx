@@ -5,10 +5,15 @@ import Divider from "./Divider";
 export type PlanType = {
   name: string;
   minimum: number;
-  maximum: number | string;
+  maximum: number;
   interest: number;
   duration: number;
 };
+
+let USDollar = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+});
 
 const Plan = ({ name, minimum, maximum, interest, duration }: PlanType) => {
   const maximumType = typeof maximum;
@@ -20,14 +25,11 @@ const Plan = ({ name, minimum, maximum, interest, duration }: PlanType) => {
       <div className="flex flex-col gap-1 px-4">
         <div className="flex justify-between">
           <p>Minimum Funding:</p>
-          <p>${minimum}</p>
+          <p>{USDollar.format(minimum)}</p>
         </div>
         <div className="flex justify-between">
           <p>Maximum Funding:</p>
-          <p>
-            {maximumType ? "$" : ""}
-            {maximum || "Unlimited"}
-          </p>
+          <p>{USDollar.format(maximum)}</p>
         </div>
         <div className="flex justify-between">
           <p>Interest Rate:</p>

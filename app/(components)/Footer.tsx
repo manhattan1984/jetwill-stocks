@@ -12,22 +12,22 @@ const Footer = () => {
       <div className="">
         <p className="text-xl mb-1">About Jetwill Stocks</p>
         <Divider />
-        <div className="">
-          <div className="w-32 my-4">
-            <Image
-              alt="Logo"
-              src="/transparent.png"
-              sizes="100%"
-              className="w-full h-4"
-              height={0}
-              width={0}
-            />
-          </div>
+        <div className="pt-2">
 
-          <p>
+
+          <Image
+            alt="Logo"
+            src="/transparent.png"
+            sizes="100%"
+            className="w-auto h-6"
+            height={0}
+            width={0}
+          />
+
+          <p className="mt-1">
             Investment strategy is based on well researched Index Strategy and
-            invests exclusively into top 20 underlying assets with the
-            highest market capitalization.
+            invests exclusively into top 20 underlying assets with the highest
+            market capitalization.
           </p>
         </div>
       </div>

@@ -8,11 +8,11 @@ import Transaction from "../(components)/Transaction";
 const Dashboard = ({
   userInfo: {
     first_name,
-    balance,
+
     total_profit,
     bonus,
     total_deposit,
-    total_withdrawals,
+    total_withdrawal,
     referral_bonus,
     total_earned,
   },
@@ -22,11 +22,11 @@ const Dashboard = ({
   const balances = [
     {
       name: "Acount Balance",
-      amount: balance,
+      amount: total_profit + total_deposit,
     },
     {
       name: "Total Profit",
-      amount: total_deposit,
+      amount: total_profit,
     },
     {
       name: "Bonus",
@@ -42,7 +42,7 @@ const Dashboard = ({
     },
     {
       name: "Total Withdrawals",
-      amount: total_withdrawals,
+      amount: total_withdrawal,
     },
   ];
 
