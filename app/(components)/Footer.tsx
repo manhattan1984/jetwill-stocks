@@ -13,8 +13,6 @@ const Footer = () => {
         <p className="text-xl mb-1">About Jetwill Stocks</p>
         <Divider />
         <div className="pt-2">
-
-
           <Image
             alt="Logo"
             src="/transparent.png"

@@ -19,7 +19,7 @@ const Header = ({ token, links }) => {
           alt="Logo"
           src="/transparent.png"
           sizes="100%"
-          className="w-full h-6"
+          className="w-auto h-6"
           height={0}
           width={0}
         />
