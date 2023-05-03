@@ -1,0 +1,204 @@
+.root {
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: var(--token-MdAT2EcXuYl7B3);
+  justify-content: center;
+  align-items: center;
+}
+.freeBox__qFql {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  max-width: var(--token-MdAT2EcXuYl7B3);
+  align-self: center;
+  min-width: 0;
+  padding: 0px 8px;
+}
+.freeBox__qFql > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  margin-left: calc(0px - 1px);
+  width: calc(100% + 1px);
+}
+.freeBox__qFql > :global(.__wab_flex-container) > *,
+.freeBox__qFql > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox__qFql > :global(.__wab_flex-container) > picture > img,
+.freeBox__qFql
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 1px;
+}
+.freeBox__qFql {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: var(--token-MdAT2EcXuYl7B3);
+  align-self: center;
+  min-width: 0;
+  padding: 0px 8px;
+}
+@media (min-width: 0px) and (max-width: 930px) {
+  .freeBox__qFql {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (min-width: 0px) and (max-width: 930px) {
+  .freeBox__qFql > :global(.__wab_flex-container) {
+    flex-direction: column;
+    margin-left: calc(0px - 0px);
+    width: calc(100% + 0px);
+  }
+}
+@media (min-width: 0px) and (max-width: 930px) {
+  .freeBox__qFql > :global(.__wab_flex-container) > *,
+  .freeBox__qFql > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .freeBox__qFql > :global(.__wab_flex-container) > picture > img,
+  .freeBox__qFql
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-left: 0px;
+  }
+}
+@media (min-width: 0px) and (max-width: 930px) {
+  .freeBox__qFql {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.freeBox__fC685 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  left: auto;
+  top: auto;
+  min-width: 0;
+  padding: 8px;
+}
+@media (min-width: 0px) and (max-width: 930px) {
+  .freeBox__fC685 {
+    padding-bottom: 0px;
+  }
+}
+.priceCard__j2Ta1:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+@media (min-width: 0px) and (max-width: 930px) {
+  .priceCard__j2Ta1:global(.__wab_instance) {
+    margin-bottom: 51px;
+  }
+}
+.freeBox__zq1Re {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  left: auto;
+  top: auto;
+  min-width: 0;
+  padding: 8px;
+}
+.freeBox___0Ynvd {
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  width: auto;
+  height: auto;
+  max-width: 304px;
+  background: #185adb;
+  z-index: 3;
+  align-self: center;
+  left: auto;
+  top: 8px;
+  margin-top: -20px;
+  border-radius: 10px;
+  padding: 12px 15px;
+}
+@media (min-width: 0px) and (max-width: 930px) {
+  .freeBox___0Ynvd {
+    margin-top: -18px;
+  }
+}
+.text {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 304px;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  text-align: center;
+  min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 930px) {
+  .text {
+    font-size: 20px;
+  }
+}
+.priceCard__b6Eki:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 0px) and (max-width: 930px) {
+  .priceCard__b6Eki:global(.__wab_instance) {
+    z-index: 1;
+    margin-bottom: 9px;
+    display: flex;
+  }
+}
+.freeBox__tpX7D {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  left: auto;
+  top: auto;
+  min-width: 0;
+  padding: 8px;
+}
+.priceCard__p6Kl:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+@media (min-width: 0px) and (max-width: 930px) {
+  .priceCard__p6Kl:global(.__wab_instance) {
+    margin-bottom: 28px;
+    margin-top: 21px;
+  }
+}

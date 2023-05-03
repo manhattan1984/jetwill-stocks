@@ -1,0 +1,617 @@
+{
+  "platform": "nextjs",
+  "code": {
+    "lang": "ts",
+    "scheme": "blackbox",
+    "reactRuntime": "classic"
+  },
+  "style": {
+    "scheme": "css-modules",
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
+  },
+  "images": {
+    "scheme": "public-files",
+    "publicDir": "../public",
+    "publicUrlPrefix": "/"
+  },
+  "tokens": {
+    "scheme": "theo",
+    "tokensFilePath": "plasmic-tokens.theo.json"
+  },
+  "srcDir": "components",
+  "defaultPlasmicDir": "./plasmic",
+  "projects": [
+    {
+      "projectId": "caTPwKxj5ZrD9LQ7DMdK4Z",
+      "projectApiToken": "vXGGQpdi9fhcncabBdg8DcMRUbkz0iRW6HS1jzQufQR6QH0MasPwr9SX7ap4SsK3xXwwXmzZtglWGe0Rm2nw",
+      "projectName": "plasmic-basic-components",
+      "version": "3.16.0",
+      "cssFilePath": "plasmic/plasmic_basic_components/plasmic_plasmic_basic_components.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "codeComponents": [
+        {
+          "id": "CMDBvOhaI4s",
+          "name": "Iframe",
+          "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
+        },
+        {
+          "id": "RhitNJW5Zu-",
+          "name": "Video",
+          "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
+        },
+        {
+          "id": "PKldDYkH42",
+          "name": "Embed",
+          "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
+        },
+        {
+          "id": "D4RbnlpRXg3",
+          "name": "DataProvider",
+          "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
+        }
+      ],
+      "jsBundleThemes": []
+    },
+    {
+      "projectId": "58GpZjZCWTaJ8AUhpCwt2K",
+      "projectApiToken": "DIkcfhBwjMCJSjcxfBkMuy4NImyytq5EWylxVcpS9t9EpdhnPQuBgBGxmk00AB1itMFa1KXTxOKnrjN2PN9nlA",
+      "projectName": "react-awesome-reveal",
+      "version": "3.13.0",
+      "cssFilePath": "plasmic/react_awesome_reveal/plasmic_react_awesome_reveal.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "codeComponents": [
+        {
+          "id": "R6s1FdhksG",
+          "name": "Reveal",
+          "componentImportPath": "@plasmicpkgs/react-awesome-reveal"
+        }
+      ],
+      "jsBundleThemes": []
+    },
+    {
+      "projectId": "enk3K4vZ6pmH6kVCoZJXGn",
+      "projectApiToken": "3n3SKEMyDjMJptsNvaK6yxRaa8PAgqwkfIhRbKT4ZG9SobeM3Kb5rE2pSYmbR338Z5p6vBTScOAnptZwGSbQ",
+      "projectName": "react-youtube",
+      "version": "4.12.0",
+      "cssFilePath": "plasmic/react_youtube/plasmic_react_youtube.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "codeComponents": [
+        {
+          "id": "CHO21V9uYw",
+          "name": "YouTube",
+          "componentImportPath": "@plasmicpkgs/react-youtube"
+        }
+      ],
+      "jsBundleThemes": []
+    },
+    {
+      "projectId": "r3ASNrnyvLLLAtDvzUioQ",
+      "projectApiToken": "eSFGpQaYCtO9sRbPuQ2Ll9dmLOg8I4oKhx6e1PuCrsfmUIVbFbSXcy32UrPTwF9zX2HVXA0xaIKJNhCMHvA",
+      "projectName": "react-slick",
+      "version": "3.12.0",
+      "cssFilePath": "plasmic/react_slick/plasmic_react_slick.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "codeComponents": [
+        {
+          "id": "HOQUyOpClJ",
+          "name": "Slider",
+          "componentImportPath": "react-slick"
+        }
+      ],
+      "jsBundleThemes": []
+    },
+    {
+      "projectId": "ohDidvG9XsCeFumugENU3J",
+      "projectApiToken": "YE6pw0s6HZvyAZENjWdhh22CZUvZbVXVeOr7IxU58m9rwk2ITG1RfJGcJjzF2uEC7DCqa4PDzPP1UXxfKuuQ",
+      "projectName": "antd5 hostless",
+      "version": "3.7.0",
+      "cssFilePath": "plasmic/antd_5_hostless/plasmic_antd_5_hostless.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "plasmic/antd_5_hostless/PlasmicGlobalContextsProvider.tsx",
+      "codeComponents": [
+        {
+          "id": "OvH7ENd3m7ug",
+          "name": "AntdSelect",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerSelect"
+        },
+        {
+          "id": "ACzfHW-ZLLiW",
+          "name": "AntdOption",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerSelect"
+        },
+        {
+          "id": "UyLCOYx2BYc4",
+          "name": "AntdTable",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerTable"
+        },
+        {
+          "id": "OFZLDfR2iHmj",
+          "name": "AntdColumn",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerTable"
+        },
+        {
+          "id": "-EU4JlrV3jtw",
+          "name": "AntdColumnGroup",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerTable"
+        },
+        {
+          "id": "DmrLLHGTjGTE",
+          "name": "AntdConfigProvider",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerConfigProvider"
+        },
+        {
+          "id": "aFHKFWNvs7",
+          "name": "AntdCheckbox",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerCheckbox"
+        },
+        {
+          "id": "2bM6vBkaxc",
+          "name": "AntdCheckboxGroup",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerCheckbox"
+        },
+        {
+          "id": "-CXVV9tXtP",
+          "name": "AntdRadio",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerRadio"
+        },
+        {
+          "id": "C3Ce7Sqgay",
+          "name": "AntdRadioButton",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerRadio"
+        },
+        {
+          "id": "PZQhrvIGy1",
+          "name": "AntdRadioGroup",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerRadio"
+        },
+        {
+          "id": "xx93QbkHH5i",
+          "name": "AntdModal",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerModal"
+        },
+        {
+          "id": "bx9Xzvf5_eu",
+          "name": "AntdButton",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerButton"
+        },
+        {
+          "id": "fo-n3xHvdqt",
+          "name": "AntdMenu",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerMenu"
+        },
+        {
+          "id": "QSmezaW-Gyu",
+          "name": "AntdMenuItem",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerMenu"
+        },
+        {
+          "id": "6ySly9jzXsR",
+          "name": "AntdMenuItemGroup",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerMenu"
+        },
+        {
+          "id": "pwJcAbVYC4M",
+          "name": "AntdMenuDivider",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerMenu"
+        },
+        {
+          "id": "nL-8oPEfDNL",
+          "name": "AntdSubMenu",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerMenu"
+        },
+        {
+          "id": "zIDEYq9RgLG",
+          "name": "AntdDropdown",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerDropdown"
+        },
+        {
+          "id": "5sJiSDZuAW",
+          "name": "AntdOptionGroup",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerSelect"
+        },
+        {
+          "id": "TgJFzUZpvQ",
+          "name": "FormWrapper",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerForm"
+        },
+        {
+          "id": "EYHwZh9ILg",
+          "name": "FormItemWrapper",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerForm"
+        },
+        {
+          "id": "zEXrWX9naj",
+          "name": "FormGroup",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerForm"
+        },
+        {
+          "id": "M2mN_XzxO4",
+          "name": "FormListWrapper",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerForm"
+        },
+        {
+          "id": "Vf5hntD2SZ5",
+          "name": "AntdInput",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerInput",
+          "helper": {
+            "name": "inputHelpers",
+            "importPath": "@plasmicpkgs/antd5/skinny/registerInput"
+          }
+        },
+        {
+          "id": "RW4q13RFtAd",
+          "name": "AntdPassword",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerInput",
+          "helper": {
+            "name": "inputHelpers",
+            "importPath": "@plasmicpkgs/antd5/skinny/registerInput"
+          }
+        },
+        {
+          "id": "pTzGlMptTxd",
+          "name": "AntdTextArea",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerInput",
+          "helper": {
+            "name": "inputHelpers",
+            "importPath": "@plasmicpkgs/antd5/skinny/registerInput"
+          }
+        },
+        {
+          "id": "wxD5qjEe3pU",
+          "name": "AntdInputNumber",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerInput"
+        },
+        {
+          "id": "Zzbfw0tfhA",
+          "name": "UploadWrapper",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerUpload"
+        }
+      ],
+      "jsBundleThemes": []
+    },
+    {
+      "projectId": "neRJon4mvg761ap1WNmssZ",
+      "projectApiToken": "xYsJ9TwS4mqAZd6zvHfkW11fhpmckEtmPNq2KbZ3sHpAgNyBNRg4g1L4Dv8xRfe4XBpwpcAlMbN9TQLLhA",
+      "projectName": "Jetwill Stocks",
+      "version": "latest",
+      "cssFilePath": "plasmic/jetwill_stocks/plasmic_jetwill_stocks.module.css",
+      "components": [
+        {
+          "id": "x2gLzZtPz2Veq",
+          "name": "Home",
+          "type": "managed",
+          "projectId": "neRJon4mvg761ap1WNmssZ",
+          "renderModuleFilePath": "plasmic/jetwill_stocks/PlasmicHome.tsx",
+          "importSpec": {
+            "modulePath": "../app/page.tsx"
+          },
+          "cssFilePath": "plasmic/jetwill_stocks/PlasmicHome.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "tlFSqouAJiG6l",
+          "name": "Navbar",
+          "type": "managed",
+          "projectId": "neRJon4mvg761ap1WNmssZ",
+          "renderModuleFilePath": "plasmic/jetwill_stocks/PlasmicNavbar.tsx",
+          "importSpec": {
+            "modulePath": "Navbar.tsx"
+          },
+          "cssFilePath": "plasmic/jetwill_stocks/PlasmicNavbar.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "1Lkkk2bErHxE3",
+          "name": "Logo",
+          "type": "managed",
+          "projectId": "neRJon4mvg761ap1WNmssZ",
+          "renderModuleFilePath": "plasmic/jetwill_stocks/PlasmicLogo.tsx",
+          "importSpec": {
+            "modulePath": "Logo.tsx"
+          },
+          "cssFilePath": "plasmic/jetwill_stocks/PlasmicLogo.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "5c-bjdNt25XYd-",
+          "name": "Button",
+          "type": "managed",
+          "projectId": "neRJon4mvg761ap1WNmssZ",
+          "renderModuleFilePath": "plasmic/jetwill_stocks/PlasmicButton.tsx",
+          "importSpec": {
+            "modulePath": "Button.tsx"
+          },
+          "cssFilePath": "plasmic/jetwill_stocks/PlasmicButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component",
+          "plumeType": "button"
+        },
+        {
+          "id": "231qAapncVHcBJ",
+          "name": "FooterSection",
+          "type": "managed",
+          "projectId": "neRJon4mvg761ap1WNmssZ",
+          "renderModuleFilePath": "plasmic/jetwill_stocks/PlasmicFooterSection.tsx",
+          "importSpec": {
+            "modulePath": "FooterSection.tsx"
+          },
+          "cssFilePath": "plasmic/jetwill_stocks/PlasmicFooterSection.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "EK78pK-FoKOrlj",
+          "name": "PriceCard",
+          "type": "managed",
+          "projectId": "neRJon4mvg761ap1WNmssZ",
+          "renderModuleFilePath": "plasmic/jetwill_stocks/PlasmicPriceCard.tsx",
+          "importSpec": {
+            "modulePath": "PriceCard.tsx"
+          },
+          "cssFilePath": "plasmic/jetwill_stocks/PlasmicPriceCard.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "fkk9W-LekQhxsr",
+          "name": "Section",
+          "type": "managed",
+          "projectId": "neRJon4mvg761ap1WNmssZ",
+          "renderModuleFilePath": "plasmic/jetwill_stocks/PlasmicSection.tsx",
+          "importSpec": {
+            "modulePath": "Section.tsx"
+          },
+          "cssFilePath": "plasmic/jetwill_stocks/PlasmicSection.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "Mwp7tAAywR_0Ru",
+          "name": "DiagramCard",
+          "type": "managed",
+          "projectId": "neRJon4mvg761ap1WNmssZ",
+          "renderModuleFilePath": "plasmic/jetwill_stocks/PlasmicDiagramCard.tsx",
+          "importSpec": {
+            "modulePath": "DiagramCard.tsx"
+          },
+          "cssFilePath": "plasmic/jetwill_stocks/PlasmicDiagramCard.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "Y7EpI0F9GFL0Z-",
+          "name": "ProductCard",
+          "type": "managed",
+          "projectId": "neRJon4mvg761ap1WNmssZ",
+          "renderModuleFilePath": "plasmic/jetwill_stocks/PlasmicProductCard.tsx",
+          "importSpec": {
+            "modulePath": "ProductCard.tsx"
+          },
+          "cssFilePath": "plasmic/jetwill_stocks/PlasmicProductCard.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "O_pcyI8SEMHQrj",
+          "name": "DetailAbout",
+          "type": "managed",
+          "projectId": "neRJon4mvg761ap1WNmssZ",
+          "renderModuleFilePath": "plasmic/jetwill_stocks/PlasmicDetailAbout.tsx",
+          "importSpec": {
+            "modulePath": "DetailAbout.tsx"
+          },
+          "cssFilePath": "plasmic/jetwill_stocks/PlasmicDetailAbout.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "l_MAnuriOR8Fm8",
+          "name": "PriceSection",
+          "type": "managed",
+          "projectId": "neRJon4mvg761ap1WNmssZ",
+          "renderModuleFilePath": "plasmic/jetwill_stocks/PlasmicPriceSection.tsx",
+          "importSpec": {
+            "modulePath": "PriceSection.tsx"
+          },
+          "cssFilePath": "plasmic/jetwill_stocks/PlasmicPriceSection.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "mnhMDu0qI-",
+          "name": "Testimonial",
+          "type": "managed",
+          "projectId": "neRJon4mvg761ap1WNmssZ",
+          "renderModuleFilePath": "plasmic/jetwill_stocks/PlasmicTestimonial.tsx",
+          "importSpec": {
+            "modulePath": "Testimonial.tsx"
+          },
+          "cssFilePath": "plasmic/jetwill_stocks/PlasmicTestimonial.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        }
+      ],
+      "icons": [
+        {
+          "id": "GIKhLHbK4iRgNo",
+          "name": "HamburgerIcon",
+          "moduleFilePath": "plasmic/jetwill_stocks/icons/PlasmicIcon__Hamburger.tsx"
+        },
+        {
+          "id": "GCrlJJAXgUWYK5",
+          "name": "CheckIcon",
+          "moduleFilePath": "plasmic/jetwill_stocks/icons/PlasmicIcon__Check.tsx"
+        },
+        {
+          "id": "H-Za2-58oP6d8l",
+          "name": "ChevronRightIcon",
+          "moduleFilePath": "plasmic/jetwill_stocks/icons/PlasmicIcon__ChevronRight.tsx"
+        },
+        {
+          "id": "LPhE7tXCtq-amR",
+          "name": "ChecksvgIcon",
+          "moduleFilePath": "plasmic/jetwill_stocks/icons/PlasmicIcon__Checksvg.tsx"
+        },
+        {
+          "id": "dwzaBJIYxDFNmL",
+          "name": "FacebooksvgIcon",
+          "moduleFilePath": "plasmic/jetwill_stocks/icons/PlasmicIcon__Facebooksvg.tsx"
+        },
+        {
+          "id": "agkLR1I2vZ_00P",
+          "name": "TwittersvgIcon",
+          "moduleFilePath": "plasmic/jetwill_stocks/icons/PlasmicIcon__Twittersvg.tsx"
+        },
+        {
+          "id": "JJhy32kSzNSmEa",
+          "name": "InstagramsvgIcon",
+          "moduleFilePath": "plasmic/jetwill_stocks/icons/PlasmicIcon__Instagramsvg.tsx"
+        },
+        {
+          "id": "yeO6V8nHqFYa7U",
+          "name": "LinkedinsvgIcon",
+          "moduleFilePath": "plasmic/jetwill_stocks/icons/PlasmicIcon__Linkedinsvg.tsx"
+        },
+        {
+          "id": "AFDHhBB0PAlRdO",
+          "name": "IconArrowRightsvgIcon",
+          "moduleFilePath": "plasmic/jetwill_stocks/icons/PlasmicIcon__IconArrowRightsvg.tsx"
+        },
+        {
+          "id": "nwveJSMc8f",
+          "name": "IconIcon",
+          "moduleFilePath": "plasmic/jetwill_stocks/icons/PlasmicIcon__Icon.tsx"
+        },
+        {
+          "id": "OYxIgRMyo",
+          "name": "Icon2Icon",
+          "moduleFilePath": "plasmic/jetwill_stocks/icons/PlasmicIcon__Icon2.tsx"
+        },
+        {
+          "id": "b-njO8RqCo",
+          "name": "Icon3Icon",
+          "moduleFilePath": "plasmic/jetwill_stocks/icons/PlasmicIcon__Icon3.tsx"
+        },
+        {
+          "id": "dJ6-kdSBM4",
+          "name": "Icon4Icon",
+          "moduleFilePath": "plasmic/jetwill_stocks/icons/PlasmicIcon__Icon4.tsx"
+        },
+        {
+          "id": "8W5AIRo2W",
+          "name": "Icon5Icon",
+          "moduleFilePath": "plasmic/jetwill_stocks/icons/PlasmicIcon__Icon5.tsx"
+        },
+        {
+          "id": "b1fleXSqXc",
+          "name": "Icon6Icon",
+          "moduleFilePath": "plasmic/jetwill_stocks/icons/PlasmicIcon__Icon6.tsx"
+        },
+        {
+          "id": "DI1h8im0Lq",
+          "name": "Icon7Icon",
+          "moduleFilePath": "plasmic/jetwill_stocks/icons/PlasmicIcon__Icon7.tsx"
+        }
+      ],
+      "images": [
+        {
+          "id": "hy9WCs5oyrMyIU",
+          "name": "backtip.png",
+          "filePath": "../public/plasmic/jetwill_stocks/images/backtippng.png"
+        },
+        {
+          "id": "F3IeZY0f_EY_WU",
+          "name": "about-ipsum.png",
+          "filePath": "../public/plasmic/jetwill_stocks/images/aboutIpsumpng.png"
+        },
+        {
+          "id": "C5z0bgKe2AtbBu",
+          "name": "about-img.png",
+          "filePath": "../public/plasmic/jetwill_stocks/images/aboutImgpng.png"
+        },
+        {
+          "id": "d6LeS94-BvDC48",
+          "name": "checklist.png",
+          "filePath": "../public/plasmic/jetwill_stocks/images/checklistpng.png"
+        },
+        {
+          "id": "qcUCeJzW2WVD2N",
+          "name": "line-pricing.png",
+          "filePath": "../public/plasmic/jetwill_stocks/images/linePricingpng.png"
+        },
+        {
+          "id": "2ls8QL1S701HUo",
+          "name": "pricing-img.svg",
+          "filePath": "../public/plasmic/jetwill_stocks/images/pricingImgsvg.svg"
+        },
+        {
+          "id": "91xh_VDLJT66tF",
+          "name": "diagram-img.svg",
+          "filePath": "../public/plasmic/jetwill_stocks/images/diagramImgsvg.svg"
+        },
+        {
+          "id": "zygEa2yHBVvf8L",
+          "name": "ellipse-left.png",
+          "filePath": "../public/plasmic/jetwill_stocks/images/ellipseLeftpng.png"
+        },
+        {
+          "id": "dVYz8f7SFiveVQ",
+          "name": "ellipse-right.png",
+          "filePath": "../public/plasmic/jetwill_stocks/images/ellipseRightpng.png"
+        }
+      ],
+      "indirect": false,
+      "globalContextsFilePath": "plasmic/jetwill_stocks/PlasmicGlobalContextsProvider.tsx",
+      "codeComponents": [
+        {
+          "id": "xqNqR5RSheoq3t",
+          "name": "PlasmicHead",
+          "componentImportPath": "@plasmicapp/react-web"
+        },
+        {
+          "id": "hQjPH1QUb8",
+          "name": "Fetcher",
+          "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
+        }
+      ]
+    }
+  ],
+  "globalVariants": {
+    "variantGroups": [
+      {
+        "id": "sihYH5ETgB_o_3",
+        "name": "Screen",
+        "projectId": "neRJon4mvg761ap1WNmssZ",
+        "contextFilePath": "plasmic/jetwill_stocks/PlasmicGlobalVariant__Screen.tsx"
+      }
+    ]
+  },
+  "wrapPagesWithGlobalContexts": true,
+  "nextjsConfig": {
+    "pagesDir": "../app"
+  },
+  "cliVersion": "0.1.257",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.257/dist/plasmic.schema.json"
+}

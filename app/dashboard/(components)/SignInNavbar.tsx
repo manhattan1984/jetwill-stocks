@@ -1,35 +1,64 @@
+"use client";
+import { useSupabase } from "@/app/(context)/supabase-provider";
 import { createClient } from "@/utils/supabase-server";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
+
 const SignInNavbar = ({ id }: { id: string | undefined }) => {
-  const supabase = createClient();
+  const { supabase } = useSupabase();
 
   // const id = (await supabase.auth.getUser()).data.user?.id;
 
+  const pathname = usePathname();
+  const NavLink = ({ href, title }: { href: string; title: string }) => {
+    return (
+      <Link
+        className={`${pathname === href ? "text-blue-600" : ""}`}
+        href={href}
+      >
+        {title}
+      </Link>
+    );
+  };
+
+  const links = [
+    { href: `/dashboard/${id}`, title: "Dashboard" },
+    {
+      href: `/dashboard/profile/${id}`,
+      title: "Profile",
+    },
+    {
+      href: `/dashboard/plans`,
+      title: "Plans",
+    },
+    {
+      href: `/dashboard/withdraw/${id}`,
+      title: "Withdraw",
+    },
+    {
+      href: `/dashboard/transactionlog/${id}`,
+      title: "Transactions",
+    },
+    {
+      href: `/dashboard/referrals/${id}`,
+      title: "Referrals",
+    },
+    {
+      href: `/dashboard/change-password/${id}`,
+      title: "Change Password",
+    },
+  ];
+
+  console.log("pathname", pathname?.split("/"));
 
   return (
-    <nav className="mb-4 mt-6 fixed w-full flex items-start shadow-lg gap-2 p-2 overflow-x-auto text-blue-700 text-xs">
-      <Link className="" href={`/dashboard/${id}`}>
-        Dashboard
-      </Link>
-      <Link className="" href={`/dashboard/profile/${id}`}>
-        Profile
-      </Link>
-      <Link className="" href="/dashboard/plans">
-        Plans
-      </Link>
-      <Link className="" href={`/dashboard/withdraw/${id}`}>
-        Withdraw
-      </Link>
-      <Link className="" href={`/dashboard/transactionlog/${id}`}>
-        Transactions
-      </Link>
-      <Link className="" href={`/dashboard/referrals/${id}`}>
-        Referrals
-      </Link>
-      <Link className="" href={`/dashboard/change-password/${id}`}>
-        Change Password
-      </Link>
+    <nav className="mb-4 fixed w-full flex items-start shadow-lg gap-2 p-2 pt-4 overflow-x-auto text-gray-400 text-xs bg-white">
+      {/* @ts-ignore */}
+      {links.map(({ href, title }) => (
+        // @ts-ignore
+        <NavLink href={href} title={title} />
+      ))}
     </nav>
   );
 };
