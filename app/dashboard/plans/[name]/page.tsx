@@ -26,7 +26,7 @@ const page = async ({ params: name }) => {
   async function getWallets() {
     let { data: wallets, error } = await supabase
       .from("wallets")
-      .select("name, address");
+      .select("name, address, imageUrl");
     return wallets;
   }
 

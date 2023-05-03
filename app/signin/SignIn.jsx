@@ -1,4 +1,5 @@
 "use client";
+import { AuthApiError } from "@supabase/supabase-js";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
@@ -16,6 +17,7 @@ const SignIn = () => {
 
   const handleEmailLogin = async () => {
     setLoading(true);
+
     const { data: user, error } = await supabase.auth.signInWithPassword({
       email: emailRef.current.value,
       password: passwordRef.current.value,
@@ -27,7 +29,11 @@ const SignIn = () => {
       return;
     }
 
-    toast.error(`Failed To Sign In, ${error}`);
+    if (error instanceof AuthApiError) {
+      toast.error(`Failed To sign in. Incorrect login details.`);
+      console.log("error", error);
+    }
+
     setLoading(false);
   };
 
@@ -39,9 +45,7 @@ const SignIn = () => {
       <Toaster />
       <div className="bg-neutral-50 flex items-center h-[90vh]">
         <div className="max-w-md mx-auto p-4 shadow m-4 rounded bg-white flex flex-col gap-3 w-full">
-          <p className="text-center text-md text-blue-600 uppercase">
-            Sign In
-          </p>
+          <p className="text-center text-md text-blue-600 uppercase">Sign In</p>
           <div className="text-center my-2">
             <p className="text-3xl">Jetwill Stocks</p>
           </div>

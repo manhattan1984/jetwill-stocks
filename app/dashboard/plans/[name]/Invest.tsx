@@ -8,7 +8,9 @@ import { toast, Toaster } from "react-hot-toast";
 import { AiOutlineClose } from "react-icons/ai";
 
 // @ts-ignore
-const Payment = ({ amount, setShow, name, address }) => {
+const Payment = ({ amount, setShow, name, address, imageUrl }) => {
+  console.log("image", imageUrl);
+
   return (
     <div className="flex flex-col justify-center items-center p-4">
       <div className="bg-white p-4 max-w-md w-full">
@@ -24,14 +26,14 @@ const Payment = ({ amount, setShow, name, address }) => {
         <div className="mt-2">
           {/* <p className="text-xs">Transaction Id: {crypto.randomUUID()}</p> */}
           <p className="my-1">
-            Kindly pay <span className="font-bold">{amount.value}</span> to this
-            Address.
+            Kindly pay <span className="font-bold">${amount.value}</span> to
+            this Address.
           </p>
-          {/* <div className="flex w-full justify-center my-3">
+          <div className="flex w-full justify-center my-3">
             <div className="relative h-28 w-28">
-              <Image fill={true} src={qr_code_url} alt={name} />
+              <Image fill={true} src={imageUrl} alt={name} />
             </div>
-          </div> */}
+          </div>
           <p>
             {name} Wallet:{" "}
             <span className="font-bold w-full break-all text-xs">
@@ -68,6 +70,7 @@ const Invest = ({
   wallets: {
     name: string;
     address: string;
+    imageUrl: string;
   }[];
 }) => {
   const { supabase, session } = useSupabase();
@@ -77,6 +80,9 @@ const Invest = ({
   const [selectedWallet, setSelectedWallet] = useState(wallets[0]);
   const [payout, setPayout] = useState(0);
   const [profit, setProfit] = useState(0);
+
+  console.log('selected wallet', selectedWallet);
+  
 
   const addTransactionToDatabase = async (type: string, amount: number) => {
     const { data, error } = await supabase
@@ -224,6 +230,7 @@ const Invest = ({
             setShow={setShowPayment}
             name={selectedWallet.name}
             address={selectedWallet.address}
+            imageUrl={selectedWallet.imageUrl}
           />
         </div>
       </div>
