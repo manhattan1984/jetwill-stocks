@@ -55,7 +55,7 @@ export default async function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className="overflow-x-hidden">
+      <body className="">
         <SupabaseProvider accessToken={session?.access_token}>
           <SupabaseListener serverAccessToken={session?.access_token} />
           <MenuProvider>

@@ -38,7 +38,6 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
-import Navbar from "../../Navbar"; // plasmic-import: tlFSqouAJiG6l/component
 import Button from "../../Button"; // plasmic-import: 5c-bjdNt25XYd-/component
 import { Embed } from "@plasmicpkgs/plasmic-basic-components"; // plasmic-import: PKldDYkH42/codeComponent
 import Section from "../../Section"; // plasmic-import: fkk9W-LekQhxsr/component
@@ -47,7 +46,6 @@ import ProductCard from "../../ProductCard"; // plasmic-import: Y7EpI0F9GFL0Z-/c
 import YouTube from "@plasmicpkgs/react-youtube"; // plasmic-import: CHO21V9uYw/codeComponent
 import { Fetcher } from "@plasmicapp/react-web/lib/data-sources"; // plasmic-import: hQjPH1QUb8/codeComponent
 import PriceCard from "../../PriceCard"; // plasmic-import: EK78pK-FoKOrlj/component
-import Slider from "react-slick"; // plasmic-import: HOQUyOpClJ/codeComponent
 import Testimonial from "../../Testimonial"; // plasmic-import: mnhMDu0qI-/component
 
 import { useScreenVariants as useScreenVariantssihYh5ETgBO3 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: sihYH5ETgB_o_3/globalVariant
@@ -79,7 +77,6 @@ export const PlasmicHome__ArgProps = new Array<ArgPropType>();
 export type PlasmicHome__OverridesType = {
   root?: p.Flex<"div">;
   headerHeroSection?: p.Flex<"div">;
-  navbar?: p.Flex<typeof Navbar>;
   tickerTape?: p.Flex<"div">;
   diagramSection?: p.Flex<typeof Section>;
   ethereumBox?: p.Flex<"div">;
@@ -91,10 +88,6 @@ export type PlasmicHome__OverridesType = {
   dataFetcher?: p.Flex<typeof Fetcher>;
   priceCard?: p.Flex<typeof PriceCard>;
   aboutSection?: p.Flex<typeof Section>;
-  slider?: p.Flex<typeof Slider>;
-  startSection?: p.Flex<typeof Section>;
-  columns?: p.Flex<"div">;
-  h3?: p.Flex<"h3">;
 };
 
 export interface DefaultHomeProps {}
@@ -188,13 +181,6 @@ function PlasmicHome__RenderFunc(props: {
                 hasGap={true}
                 className={classNames(projectcss.all, sty.headerHeroSection)}
               >
-                {true ? (
-                  <Navbar
-                    data-plasmic-name={"navbar"}
-                    data-plasmic-override={overrides.navbar}
-                    className={classNames("__wab_instance", sty.navbar)}
-                  />
-                ) : null}
                 <div className={classNames(projectcss.all, sty.freeBox__c0YQ)}>
                   <p.Stack
                     as={"div"}
@@ -990,76 +976,6 @@ function PlasmicHome__RenderFunc(props: {
                       "As a Jetwill Stocks client, you'll have access to a wide range of services and resources designed to help you make informed investment decisions. Whether you're a seasoned investor or just getting started, we're here to help you succeed."
                     }
                   </div>
-                  {(
-                    hasVariant(globalVariants, "screen", "mobileOnly")
-                      ? true
-                      : false
-                  ) ? (
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__y9Oaf)}
-                    >
-                      <Button
-                        className={classNames(
-                          "__wab_instance",
-                          sty.button__mvcm6
-                        )}
-                        color={"blueBorder" as const}
-                        endIcon={
-                          <svg
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg__gqSsJ
-                            )}
-                            role={"img"}
-                          />
-                        }
-                        startIcon={
-                          <svg
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg__koR2J
-                            )}
-                            role={"img"}
-                          />
-                        }
-                      >
-                        {"Learn More"}
-                      </Button>
-                      {(
-                        hasVariant(globalVariants, "screen", "mobileOnly")
-                          ? true
-                          : true
-                      ) ? (
-                        <Button
-                          className={classNames(
-                            "__wab_instance",
-                            sty.button__hqvmr
-                          )}
-                          color={"blueBorder" as const}
-                          endIcon={
-                            <svg
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__mzpSf
-                              )}
-                              role={"img"}
-                            />
-                          }
-                          startIcon={
-                            <svg
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__d6O
-                              )}
-                              role={"img"}
-                            />
-                          }
-                        >
-                          {"Learn More"}
-                        </Button>
-                      ) : null}
-                    </div>
-                  ) : null}
                 </div>
               </p.Stack>
             </Reveal>
@@ -1126,7 +1042,10 @@ function PlasmicHome__RenderFunc(props: {
                         key={currentIndex}
                         slot={(() => {
                           try {
-                            return `$${currentItem.minimum}`;
+                            return currentItem.minimum.toLocaleString("en-US", {
+                              style: "currency",
+                              currency: "USD"
+                            });
                           } catch (e) {
                             if (e instanceof TypeError) {
                               return "$500";
@@ -1136,7 +1055,13 @@ function PlasmicHome__RenderFunc(props: {
                         })()}
                         slot2={(() => {
                           try {
-                            return `$${currentItem.maximum}`;
+                            return (+currentItem.maximum).toLocaleString(
+                              "en-US",
+                              {
+                                style: "currency",
+                                currency: "USD"
+                              }
+                            );
                           } catch (e) {
                             if (e instanceof TypeError) {
                               return "$500";
@@ -1180,142 +1105,194 @@ function PlasmicHome__RenderFunc(props: {
                   }
                 </Fetcher>
               </div>
-              <Reveal
-                className={classNames("__wab_instance", sty.reveal__tc0H3)}
-                triggerOnce={true}
-              >
-                <Section
-                  data-plasmic-name={"aboutSection"}
-                  data-plasmic-override={overrides.aboutSection}
-                  background={"dark" as const}
-                  className={classNames("__wab_instance", sty.aboutSection)}
-                  size={
-                    hasVariant(globalVariants, "screen", "mobileOnly")
-                      ? ("mobile" as const)
-                      : undefined
-                  }
+              {(
+                hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
+              ) ? (
+                <Reveal
+                  className={classNames("__wab_instance", sty.reveal__tc0H3)}
+                  triggerOnce={true}
                 >
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__dBIi)}
+                  <Section
+                    data-plasmic-name={"aboutSection"}
+                    data-plasmic-override={overrides.aboutSection}
+                    background={"dark" as const}
+                    className={classNames("__wab_instance", sty.aboutSection)}
+                    size={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("mobile" as const)
+                        : undefined
+                    }
                   >
-                    <h2
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h2,
-                        projectcss.__wab_text,
-                        sty.h2__x0Gge
-                      )}
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__dBIi)}
                     >
-                      {hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? "What people say \nabout us"
-                        : "What people say about us"}
-                    </h2>
-                    <Slider
-                      data-plasmic-name={"slider"}
-                      data-plasmic-override={overrides.slider}
-                      adaptiveHeight={true}
-                      autoplay={true}
-                      centerMode={false}
-                      className={classNames("__wab_instance", sty.slider)}
-                      vertical={false}
-                    >
-                      <Testimonial
+                      <h2
                         className={classNames(
-                          "__wab_instance",
-                          sty.testimonial___5Slyz
+                          projectcss.all,
+                          projectcss.h2,
+                          projectcss.__wab_text,
+                          sty.h2__x0Gge
                         )}
-                        slot={"Sharon Brown"}
-                        slot2={
-                          "I had never invested in the stock market before, but Jetwill Stocks made the process easy and accessible. Their educational resources and personalized guidance helped me understand the basics of investing and build a portfolio that aligned with my financial goals. I appreciate their commitment to transparency and competitive pricing, which makes it easy to invest with confidence."
-                        }
-                        slot3={
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__rPz0A
-                            )}
-                          >
-                            {"Trader"}
-                          </div>
-                        }
                       >
-                        <p.PlasmicImg
-                          alt={""}
-                          className={classNames(sty.img__qNraw)}
-                          displayHeight={"auto" as const}
-                          displayMaxHeight={"none" as const}
-                          displayMaxWidth={"100%" as const}
-                          displayMinHeight={"0" as const}
-                          displayMinWidth={"0" as const}
-                          displayWidth={"auto" as const}
-                          loading={"lazy" as const}
-                          src={
-                            "https://images.unsplash.com/photo-1655249493799-9cee4fe983bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" as const
-                          }
-                        />
-                      </Testimonial>
-                      <Testimonial
-                        className={classNames(
-                          "__wab_instance",
-                          sty.testimonial__lAwd
-                        )}
-                        slot2={
-                          "I've been with Jetwill Stocks for over a year now, and I'm blown away by the level of service and support they provide. Their team of brokers is incredibly knowledgeable and always willing to help, whether it's answering questions or providing guidance on investment decisions. With their cutting-edge technology and comprehensive resources, I feel confident and empowered as an investor."
-                        }
-                        slot3={
-                          <div
+                        {hasVariant(globalVariants, "screen", "mobileOnly")
+                          ? "What people say \nabout us"
+                          : "What people say about us"}
+                      </h2>
+                      {true ? (
+                        <p.Stack
+                          as={"div"}
+                          hasGap={true}
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__awRIr
+                          )}
+                        >
+                          <Testimonial
                             className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__v51T
+                              "__wab_instance",
+                              sty.testimonial__nu1Qr
                             )}
+                            slot={"James Michaelson"}
+                            slot2={"Trader"}
+                            slot3={
+                              <p.PlasmicImg
+                                alt={""}
+                                className={classNames(sty.img__kuGwk)}
+                                displayHeight={
+                                  hasVariant(
+                                    globalVariants,
+                                    "screen",
+                                    "mobileOnly"
+                                  )
+                                    ? ("150px" as const)
+                                    : ("200px" as const)
+                                }
+                                displayMaxHeight={"none" as const}
+                                displayMaxWidth={"100%" as const}
+                                displayMinHeight={"0" as const}
+                                displayMinWidth={"0" as const}
+                                displayWidth={
+                                  hasVariant(
+                                    globalVariants,
+                                    "screen",
+                                    "mobileOnly"
+                                  )
+                                    ? ("150px" as const)
+                                    : ("200px" as const)
+                                }
+                                loading={"lazy" as const}
+                                src={
+                                  "https://images.unsplash.com/photo-1562788869-4ed32648eb72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80" as const
+                                }
+                              />
+                            }
                           >
-                            {"Investor"}
-                          </div>
-                        }
-                      />
-
-                      <Testimonial
-                        className={classNames(
-                          "__wab_instance",
-                          sty.testimonial__nu1Qr
-                        )}
-                        slot={"Alex Jordan"}
-                        slot2={
-                          "I've been investing with Jetwill Stocks for several years now, and I'm consistently impressed by their level of service and expertise. They have helped me navigate market fluctuations and make informed investment decisions that have paid off in the long run. I appreciate their commitment to building strong relationships with their clients and providing personalized service that meets my unique needs."
-                        }
-                        slot3={
-                          <div
+                            {
+                              "I had never invested in the stock market before, but Jetwill Stocks made the process easy and accessible. Their educational resources and personalized guidance helped me understand the basics of investing and build a portfolio that aligned with my financial goals. I appreciate their commitment to transparency and competitive pricing, which makes it easy to invest with confidence."
+                            }
+                          </Testimonial>
+                          <Testimonial
                             className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__xfo9R
+                              "__wab_instance",
+                              sty.testimonial___5Slyz
                             )}
+                            slot={"Sarah Paul"}
+                            slot2={"Investor"}
+                            slot3={
+                              <p.PlasmicImg
+                                alt={""}
+                                className={classNames(sty.img__pLxCk)}
+                                displayHeight={
+                                  hasVariant(
+                                    globalVariants,
+                                    "screen",
+                                    "mobileOnly"
+                                  )
+                                    ? ("150px" as const)
+                                    : ("200px" as const)
+                                }
+                                displayMaxHeight={"none" as const}
+                                displayMaxWidth={"100%" as const}
+                                displayMinHeight={"0" as const}
+                                displayMinWidth={"0" as const}
+                                displayWidth={
+                                  hasVariant(
+                                    globalVariants,
+                                    "screen",
+                                    "mobileOnly"
+                                  )
+                                    ? ("150px" as const)
+                                    : ("200px" as const)
+                                }
+                                loading={"lazy" as const}
+                                src={
+                                  "https://images.unsplash.com/photo-1655249493799-9cee4fe983bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" as const
+                                }
+                              />
+                            }
                           >
-                            {"Investor"}
-                          </div>
-                        }
-                      >
-                        <p.PlasmicImg
-                          alt={""}
-                          className={classNames(sty.img__dFuWk)}
-                          displayHeight={"500px" as const}
-                          displayMaxHeight={"none" as const}
-                          displayMaxWidth={"100%" as const}
-                          displayMinHeight={"0" as const}
-                          displayMinWidth={"0" as const}
-                          displayWidth={"auto" as const}
-                          loading={"lazy" as const}
-                          src={
-                            "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" as const
-                          }
-                        />
-                      </Testimonial>
-                    </Slider>
-                  </div>
-                </Section>
-              </Reveal>
+                            {
+                              "I've been investing with Jetwill Stocks for several years now, and I'm consistently impressed by their level of service and expertise. They have helped me navigate market fluctuations and make informed investment decisions that have paid off in the long run. I appreciate their commitment to building strong relationships with their clients and providing personalized service that meets my unique needs."
+                            }
+                          </Testimonial>
+                          <Testimonial
+                            className={classNames(
+                              "__wab_instance",
+                              sty.testimonial__lAwd
+                            )}
+                            slot={"Alan James"}
+                            slot2={"Investor"}
+                            slot3={
+                              <p.PlasmicImg
+                                alt={""}
+                                className={classNames(sty.img___7TYx4)}
+                                displayHeight={
+                                  hasVariant(
+                                    globalVariants,
+                                    "screen",
+                                    "mobileOnly"
+                                  )
+                                    ? ("150px" as const)
+                                    : ("200px" as const)
+                                }
+                                displayMaxHeight={"none" as const}
+                                displayMaxWidth={"100%" as const}
+                                displayMinHeight={"0" as const}
+                                displayMinWidth={"0" as const}
+                                displayWidth={
+                                  hasVariant(
+                                    globalVariants,
+                                    "screen",
+                                    "mobileOnly"
+                                  )
+                                    ? ("150px" as const)
+                                    : ("200px" as const)
+                                }
+                                loading={"lazy" as const}
+                                src={
+                                  "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" as const
+                                }
+                              />
+                            }
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__hvxhc
+                              )}
+                            >
+                              {
+                                "I've been with Jetwill Stocks for over a year now, and I'm blown away by the level of service and support they provide. Their team of brokers is incredibly knowledgeable and always willing to help, whether it's answering questions or providing guidance on investment decisions. With their cutting-edge technology and comprehensive resources, I feel confident and empowered as an investor."
+                              }
+                            </div>
+                          </Testimonial>
+                        </p.Stack>
+                      ) : null}
+                    </div>
+                  </Section>
+                </Reveal>
+              ) : null}
             </div>
             <div className={classNames(projectcss.all, sty.freeBox___8W40E)}>
               <Embed
@@ -1325,122 +1302,6 @@ function PlasmicHome__RenderFunc(props: {
                 }
               />
             </div>
-            {true ? (
-              <Section
-                data-plasmic-name={"startSection"}
-                data-plasmic-override={overrides.startSection}
-                className={classNames("__wab_instance", sty.startSection)}
-                size={"fullContentWidth" as const}
-              >
-                {true ? (
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__duCbw)}
-                  >
-                    <p.PlasmicImg
-                      alt={""}
-                      className={classNames(sty.img__iu7Ut)}
-                      displayHeight={"auto" as const}
-                      displayMaxHeight={"none" as const}
-                      displayMaxWidth={"100%" as const}
-                      displayMinHeight={"0" as const}
-                      displayMinWidth={"0" as const}
-                      displayWidth={"auto" as const}
-                      loading={"lazy" as const}
-                      src={{
-                        src: "/plasmic/jetwill_stocks/images/pricingImgsvg.svg",
-                        fullWidth: 300,
-                        fullHeight: 67,
-                        aspectRatio: 4.468401
-                      }}
-                    />
-
-                    <div
-                      data-plasmic-name={"columns"}
-                      data-plasmic-override={overrides.columns}
-                      className={classNames(projectcss.all, sty.columns)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.column__stl9W
-                        )}
-                      >
-                        <h3
-                          data-plasmic-name={"h3"}
-                          data-plasmic-override={overrides.h3}
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.h3,
-                            projectcss.__wab_text,
-                            sty.h3
-                          )}
-                        >
-                          {hasVariant(globalVariants, "screen", "mobileOnly")
-                            ? "Start using our product today"
-                            : "Start using our product today"}
-                        </h3>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text___4Bzte
-                          )}
-                        >
-                          {hasVariant(globalVariants, "screen", "mobileOnly")
-                            ? "Faster than free analytics tools. Access to all your data, with respect to the privacy of your users."
-                            : "Faster than free analytics tools. Access to all your data, with respect to the privacy of your users."}
-                        </div>
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.column__wJdEk
-                        )}
-                      >
-                        <Button
-                          className={classNames(
-                            "__wab_instance",
-                            sty.button__mvOc
-                          )}
-                          color={"white" as const}
-                          endIcon={
-                            <svg
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__q5Eqy
-                              )}
-                              role={"img"}
-                            />
-                          }
-                          link={"#" as const}
-                          startIcon={
-                            <svg
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__nj4Ah
-                              )}
-                              role={"img"}
-                            />
-                          }
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__jpir9
-                            )}
-                          >
-                            {hasVariant(globalVariants, "screen", "mobileOnly")
-                              ? "Get Started"
-                              : "Get Started"}
-                          </div>
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                ) : null}
-              </Section>
-            ) : null}
           </div>
         ) : null}
       </div>
@@ -1452,7 +1313,6 @@ const PlasmicDescendants = {
   root: [
     "root",
     "headerHeroSection",
-    "navbar",
     "tickerTape",
     "diagramSection",
     "ethereumBox",
@@ -1463,14 +1323,9 @@ const PlasmicDescendants = {
     "youTube",
     "dataFetcher",
     "priceCard",
-    "aboutSection",
-    "slider",
-    "startSection",
-    "columns",
-    "h3"
+    "aboutSection"
   ],
-  headerHeroSection: ["headerHeroSection", "navbar"],
-  navbar: ["navbar"],
+  headerHeroSection: ["headerHeroSection"],
   tickerTape: ["tickerTape"],
   diagramSection: ["diagramSection", "ethereumBox"],
   ethereumBox: ["ethereumBox"],
@@ -1481,11 +1336,7 @@ const PlasmicDescendants = {
   youTube: ["youTube"],
   dataFetcher: ["dataFetcher", "priceCard"],
   priceCard: ["priceCard"],
-  aboutSection: ["aboutSection", "slider"],
-  slider: ["slider"],
-  startSection: ["startSection", "columns", "h3"],
-  columns: ["columns", "h3"],
-  h3: ["h3"]
+  aboutSection: ["aboutSection"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -1493,7 +1344,6 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   headerHeroSection: "div";
-  navbar: typeof Navbar;
   tickerTape: "div";
   diagramSection: typeof Section;
   ethereumBox: "div";
@@ -1505,10 +1355,6 @@ type NodeDefaultElementType = {
   dataFetcher: typeof Fetcher;
   priceCard: typeof PriceCard;
   aboutSection: typeof Section;
-  slider: typeof Slider;
-  startSection: typeof Section;
-  columns: "div";
-  h3: "h3";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -1572,7 +1418,6 @@ export const PlasmicHome = Object.assign(
   {
     // Helper components rendering sub-elements
     headerHeroSection: makeNodeComponent("headerHeroSection"),
-    navbar: makeNodeComponent("navbar"),
     tickerTape: makeNodeComponent("tickerTape"),
     diagramSection: makeNodeComponent("diagramSection"),
     ethereumBox: makeNodeComponent("ethereumBox"),
@@ -1584,10 +1429,6 @@ export const PlasmicHome = Object.assign(
     dataFetcher: makeNodeComponent("dataFetcher"),
     priceCard: makeNodeComponent("priceCard"),
     aboutSection: makeNodeComponent("aboutSection"),
-    slider: makeNodeComponent("slider"),
-    startSection: makeNodeComponent("startSection"),
-    columns: makeNodeComponent("columns"),
-    h3: makeNodeComponent("h3"),
 
     // Metadata about props expected for PlasmicHome
     internalVariantProps: PlasmicHome__VariantProps,

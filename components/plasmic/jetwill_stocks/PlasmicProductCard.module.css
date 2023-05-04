@@ -50,8 +50,16 @@
   min-width: 0;
 }
 @media (min-width: 0px) and (max-width: 930px) {
+  .h3 {
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 0px) and (max-width: 930px) {
   .slotTargetChildren {
     font-size: 22px;
+    text-align: center;
   }
 }
 .freeBox__ffmRn {
@@ -72,6 +80,6 @@
 @media (min-width: 0px) and (max-width: 930px) {
   .slotTargetSlot {
     font-size: 18px;
-    text-align: left;
+    text-align: center;
   }
 }

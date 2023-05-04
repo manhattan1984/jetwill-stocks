@@ -68,8 +68,6 @@ export const PlasmicTestimonial__ArgProps = new Array<ArgPropType>(
 
 export type PlasmicTestimonial__OverridesType = {
   root?: p.Flex<"div">;
-  h2?: p.Flex<"h2">;
-  img?: p.Flex<typeof p.PlasmicImg>;
 };
 
 export interface DefaultTestimonialProps {
@@ -137,129 +135,65 @@ function PlasmicTestimonial__RenderFunc(props: {
         sty.root
       )}
     >
-      <div className={classNames(projectcss.all, sty.freeBox__sKi1K)}>
+      <p.Stack
+        as={"div"}
+        hasGap={true}
+        className={classNames(projectcss.all, sty.freeBox__j8Zy6)}
+      >
         {p.renderPlasmicSlot({
           defaultContents: (
             <p.PlasmicImg
               alt={""}
-              className={classNames(sty.img__pZ8Wq)}
-              displayHeight={"auto" as const}
+              className={classNames(sty.img__fOmtU)}
+              displayHeight={"150px" as const}
               displayMaxHeight={"none" as const}
               displayMaxWidth={"100%" as const}
               displayMinHeight={"0" as const}
               displayMinWidth={"0" as const}
-              displayWidth={"auto" as const}
+              displayWidth={"150px" as const}
               loading={"lazy" as const}
-              src={{
-                src: "/plasmic/jetwill_stocks/images/aboutImgpng.png",
-                fullWidth: 400,
-                fullHeight: 500,
-                aspectRatio: undefined
-              }}
+              src={undefined}
             />
           ),
 
-          value: args.children
+          value: args.slot3
         })}
-      </div>
-      <div className={classNames(projectcss.all, sty.freeBox__st5TO)}>
-        <h2
-          data-plasmic-name={"h2"}
-          data-plasmic-override={overrides.h2}
-          className={classNames(projectcss.all, projectcss.h2, sty.h2)}
-        >
-          {p.renderPlasmicSlot({
-            defaultContents: "Michael Justin",
-            value: args.slot,
-            className: classNames(sty.slotTargetSlot)
-          })}
-        </h2>
-        <div className={classNames(projectcss.all, sty.freeBox__qh4A3)}>
-          {p.renderPlasmicSlot({
-            defaultContents: (
-              <React.Fragment>
-                <p.PlasmicImg
-                  alt={""}
-                  className={classNames(sty.img___2DZhv)}
-                  displayHeight={"auto" as const}
-                  displayMaxHeight={"none" as const}
-                  displayMaxWidth={"100%" as const}
-                  displayMinHeight={"0" as const}
-                  displayMinWidth={"0" as const}
-                  displayWidth={"auto" as const}
-                  loading={"lazy" as const}
-                  src={{
-                    src: "/plasmic/jetwill_stocks/images/aboutIpsumpng.png",
-                    fullWidth: 152,
-                    fullHeight: 40,
-                    aspectRatio: undefined
-                  }}
-                />
-
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__bLr
-                  )}
-                >
-                  {"CEO Company"}
-                </div>
-              </React.Fragment>
-            ),
-            value: args.slot3
-          })}
+        <div className={classNames(projectcss.all, sty.freeBox__lw8Jh)}>
+          <div className={classNames(projectcss.all, sty.freeBox__vKIiV)}>
+            {p.renderPlasmicSlot({
+              defaultContents: "some text",
+              value: args.slot,
+              className: classNames(sty.slotTargetSlot)
+            })}
+          </div>
+          <div className={classNames(projectcss.all, sty.freeBox__o0YSz)}>
+            {p.renderPlasmicSlot({
+              defaultContents: "some text",
+              value: args.slot2,
+              className: classNames(sty.slotTargetSlot2)
+            })}
+          </div>
         </div>
-        <div className={classNames(projectcss.all, sty.freeBox___0JKc)}>
-          <p.PlasmicImg
-            data-plasmic-name={"img"}
-            data-plasmic-override={overrides.img}
-            alt={""}
-            className={classNames(sty.img)}
-            displayHeight={"auto" as const}
-            displayMaxHeight={"none" as const}
-            displayMaxWidth={"100%" as const}
-            displayMinHeight={"0" as const}
-            displayMinWidth={"0" as const}
-            displayWidth={
-              hasVariant(globalVariants, "screen", "mobileOnly")
-                ? ("auto" as const)
-                : ("auto" as const)
-            }
-            loading={"lazy" as const}
-            src={{
-              src: "/plasmic/jetwill_stocks/images/backtippng.png",
-              fullWidth: 34,
-              fullHeight: 32,
-              aspectRatio: undefined
-            }}
-          />
-        </div>
-        <div className={classNames(projectcss.all, sty.freeBox___3Mzcb)}>
-          {p.renderPlasmicSlot({
-            defaultContents:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            value: args.slot2,
-            className: classNames(sty.slotTargetSlot2)
-          })}
-        </div>
+      </p.Stack>
+      <div className={classNames(projectcss.all, sty.freeBox__brFw6)}>
+        {p.renderPlasmicSlot({
+          defaultContents: "Enter some text",
+          value: args.children,
+          className: classNames(sty.slotTargetChildren)
+        })}
       </div>
     </div>
   ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {
-  root: ["root", "h2", "img"],
-  h2: ["h2"],
-  img: ["img"]
+  root: ["root"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  h2: "h2";
-  img: typeof p.PlasmicImg;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -322,8 +256,6 @@ export const PlasmicTestimonial = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    h2: makeNodeComponent("h2"),
-    img: makeNodeComponent("img"),
 
     // Metadata about props expected for PlasmicTestimonial
     internalVariantProps: PlasmicTestimonial__VariantProps,
