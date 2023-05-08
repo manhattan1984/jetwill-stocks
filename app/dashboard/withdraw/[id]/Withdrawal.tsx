@@ -10,12 +10,14 @@ const Withdrawal = ({
   user_id,
   wallets,
   email,
+  balance,
 }: {
   user_id: string;
   email: string;
   wallets: {
     name: string;
   }[];
+  balance: number;
 }) => {
   const { supabase } = useSupabase();
 
@@ -68,19 +70,27 @@ const Withdrawal = ({
           <div className="flex gap-2">
             <button
               onClick={() => {
+                // @ts-ignore
+                const withdrawAmount = +amountRef.current.value;
+                if (balance < withdrawAmount || withdrawAmount === 0) {
+                  toast.error("You have insufficient funds.");
+                  return;
+                }
                 addTransactionToDatabase(
                   "withdrawal",
-                  // @ts-ignore
-                  +amountRef.current.value
+
+                  withdrawAmount
                 );
                 sendEmailToUser(
                   email,
                   "Withdrawal",
-                  // @ts-ignore
-                  `We have been notified of your recent request of $${amountRef.current.value}. It is currently being processed. Thank you.`
+
+                  `We have been notified of your recent request of $${withdrawAmount}. It is currently being processed. Thank you.`
                 );
-                router.push(`/dashboard/${user_id}`);
-               
+
+                setTimeout(() => {
+                  router.push(`/dashboard/${user_id}`);
+                }, 3000);
               }}
               className="text-blue-600 py-1 px-3"
             >

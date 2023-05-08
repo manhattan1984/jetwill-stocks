@@ -15,7 +15,7 @@ const page = async ({ params: id }) => {
       .select("*")
       .eq("id", id.id)
       .single();
-
+// 
     console.log("user error", error);
 
     return data;

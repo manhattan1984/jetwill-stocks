@@ -20,8 +20,8 @@ const Transaction = ({
 }) => {
   const date = new Date(created_at).toLocaleString();
   return (
-    <div className="bg-white border py-2 grid my-2 grid-cols-5 text-center">
-      <p className="text-xs truncate mx-1">{id}</p>
+    <div className="bg-white border py-2 grid my-2 grid-cols-4 text-center">
+      {/* <p className="text-xs truncate mx-1">{id}</p> */}
       <p className="capitalize">{plan || type}</p>
       <p>{`${type === "deposit" ? "" : "-"}$${amount}`}</p>
       <p className="text-xs">{date}</p>

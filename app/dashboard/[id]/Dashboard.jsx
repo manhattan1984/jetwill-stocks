@@ -61,8 +61,8 @@ const Dashboard = ({
       <div className="bg-white rounded p-4 my-4 text-center">
         <p className="text-left my-2">Latest Active Deposits</p>
 
-        <div className="border grid grid-cols-5 gap-4 text-center text-sm py-2">
-          <p>Ref Id</p>
+        <div className="border grid grid-cols-4 gap-4 text-center text-sm py-2">
+          {/* <p>Ref Id</p> */}
           <p>Plan Name</p>
           <p>Amount ($)</p>
           <p>Date</p>
@@ -84,8 +84,8 @@ const Dashboard = ({
       {/* Transactions */}
       <div className="bg-white rounded p-4 my-4">
         <p className="my-2">Latest Transactions</p>
-        <div className="border grid grid-cols-5 gap-4 text-center text-sm py-2">
-          <p>Ref Id</p>
+        <div className="border grid grid-cols-4 gap-4 text-center text-sm py-2">
+          {/* <p>Ref Id</p> */}
           <p>Plan Name</p>
           <p>Amount ($)</p>
           <p>Date</p>
