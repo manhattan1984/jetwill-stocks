@@ -25,7 +25,8 @@ const Footer = () => {
           <p className="mt-1">
             Investment strategy is based on well researched Index Strategy and
             invests exclusively into top 20 underlying assets with the highest
-            market capitalization.
+            market capitalization. We are a trading platform under TD Ameritrade
+            Investment service in Boston, Massachusettes.
           </p>
         </div>
       </div>
@@ -42,18 +43,22 @@ const Footer = () => {
           <div className="flex gap-2 items-center my-1">
             <TiLocation className="text-xl text-white" />
             <p className="text-sm">
-              1900 Fifth Avenue North Birmingham, Alabama, USA
+              127 Congress St Floor 1, Boston, MA 02110, United States{" "}
             </p>
           </div>
           <div className="flex gap-2 items-center">
             <SiWhatsapp className="text-white text-lg" />
-            <Link
+            {/* <Link
               passHref={true}
               href="https://wa.me/+18055394475"
               className="text-blue-500 text-sm"
             >
               +1 805-539-4475
-            </Link>
+            </Link> */}
+            <p className="text-sm">
+              Contact support to be assigned to a manager to chat with on
+              Whatsapp.
+            </p>
           </div>
         </div>
       </div>
